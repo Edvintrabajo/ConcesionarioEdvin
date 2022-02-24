@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConcesionarioEdvin</title>
+
+    <!--FAVICON-->
+    <link rel="icon" href="img/favicon.ico">
+
+    <!--LINK CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+    <!--BARRA-->
+    <div class="barra">
+
+        <div class="contenedor-barra contenedor">
+
+            <a href="index.html" class="nombre-empresa">Concesionario<span>Edvin</span></a>
+
+            <nav>
+
+                <a href="anuncios.html">Coches</a>
+
+                <a href="contacto.html">Contacto</a>
+
+                <a href="nosotros.html">Nosotros</a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+    <!--NAV PARA MOVIL-->
+    <div class="contenedor-menu-movil">
+
+        <nav class="menu-movil">
+
+            <input type="checkbox" id="menu">
+
+            <label for="menu"><img src="img/bars-solid.svg" alt="menu"></label>
+
+            <ul>
+
+                <li><a href="anuncios.html">Coches</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+    <h1 class="alinear-texto">Contacto</h1>
+    <img class="imagen-formulario" src="img/contacto-formulario.jpg" alt="Imagen Principal">
+
+    <!--CONTACTO-->
+    <main class="contenedor section width-centrado">
+        <h2 class="alinear-texto texto-formulario">Llena el formulario de Contacto</h2>
+
+        <form class="contacto" action="http://www.iesanaluisabenitez.org/" method="get">
+            <fieldset>
+                <legend>Información del Cliente</legend>
+                <label for="nombre">Nombre:</label>
+                <input class="input" type="text" id="nombre" placeholder="Tu Nombre" required>
+
+                <label for="email">E-mail:</label>
+                <input class="input" type="email" id="email" placeholder="Tu Correo electrónico" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input class="input" type="tel" id="telefono" placeholder="Tu Teléfono" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje"></textarea>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Información sobre el coche</legend>
+                <label for="opciones">Compra o Vende</label>
+                <select id="opciones" required>
+                    <option value="" disabled selected>-- Seleccione --</option>
+                    <option value="Compra">Compra</option>
+                    <option value="Vende">Vende</option>
+                </select>
+
+                <label for="nombre-coche">Nombre del Coche:</label>
+                <input class="input" type="text" id="nombre-coche" placeholder="Nombre del Coche" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacto</legend>
+
+                <p class="margin-0">De que forma prefieres ser contactado:</p>
+
+                <div class="forma-contacto">
+                    <label for="telefono-contacto">Teléfono</label>
+                    <input class="input input-radio" type="radio" name="contacto" value="telefono-contacto" id="telefono-contacto">
+
+                    <label for="correo">E-mail</label>
+                    <input class="input input-radio" type="radio" name="contacto" value="correo" id="correo">
+                </div>
+
+                <p class="margin-p">¿Qué fecha te viene bien?</p>
+                <label for="fecha">Fecha:</label>
+                <input class="input" type="date" id="fecha">
+
+            </fieldset>
+
+            <div class="submit-contacto">
+
+                <input type="submit" value="Enviar" class="boton-negro mq-btn">
+
+            </div>
+
+        </form>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+
+        <!--BARRA-->
+        <div class="barra">
+
+            <div class="contenedor-barra contenedor footer">
+
+                <nav>
+
+                    <a href="anuncios.html">Coches</a>
+
+                    <a href="contacto.html">Contacto</a>
+
+                    <a href="nosotros.html">Nosotros</a>
+
+                </nav>
+
+                <p class="copyright">&copy; Copyright 2022 - Todos los Derechos Reservados</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
