@@ -1,0 +1,735 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+ box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+background: white;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: black;    /* color of the scroll thumb */       /* roundness of the scroll thumb */
+border-radius: 15px;
+border: 2px solid white;  /* creates padding around scroll thumb */
+}
+  
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3.4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.6rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+
+/*UTILIDADES*/
+
+.alinear-texto {
+    text-align: center;
+}
+
+.section {
+    margin: 2rem 0;
+}
+
+.contenedor {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.margin-top {
+    margin-top: 2rem;
+}
+
+.margin-bottom {
+    margin-bottom: 2rem;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+
+/*BOTONES*/
+
+.boton {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-align: center;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+    width: 15rem;
+    margin: 0 auto;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.boton-rojo {
+    background-color: red;
+}
+
+.boton-negro {
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    margin: 1.5rem 0;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    width: 15rem;
+    margin-bottom: 1.8rem;
+}
+
+.boton-negro:hover {
+    cursor: pointer;
+    color: red;
+}
+
+
+/*HEADER*/
+
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: white;
+}
+
+.header-img {
+    background-image: url(img/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.barra {
+    background-color: black;
+    position: relative;
+}
+
+.contenedor-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nombre-empresa {
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+}
+
+.nombre-empresa:hover {
+    cursor: pointer;
+}
+
+.nombre-empresa span {
+    font-weight: 800;
+}
+
+.nombre-empresa:hover span {
+    color: red;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav a:last-of-type {
+    margin-right: 0;
+}
+
+nav a:hover {
+    color: red;
+}
+
+.texto-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: 70%;
+    position: relative;
+    text-align: center;
+}
+
+/*MEDIA QUERIES PARA EL HEADER*/
+@media only screen and (max-width : 900px) {
+    nav {
+        display: none;
+    }
+
+    .nombre-empresa {
+        margin: 0 auto;
+    }
+
+    .texto-header {
+        height: 56%;
+        text-align: center;
+    }
+
+    .texto-header h2, h3 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    .nombre-empresa {
+        font-size: 2.2rem;
+    }
+}
+
+@media only screen and (max-width : 340px) {
+    .nombre-empresa {
+        font-size: 1.6rem;
+    }
+
+    .texto-header h2, h3 {
+        font-size: 1.4rem;
+    }
+}
+
+
+/*MAIN ANUNCIOS*/
+
+.titulo-anuncios {
+    text-align: center;
+}
+
+.contenedor-anuncios {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-anuncios a {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.anuncio {
+    display: inline-block;
+    width: 30rem;
+    border: solid #b5b5b5 1px;
+    background: #f5f5f5;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .4s;
+}
+
+.anuncio-especial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 177px;
+}
+
+.anuncio:hover {
+    transform: scale(1.1);
+    transition: all .4s;
+}
+
+.contenedor-img {
+    width: 100%;
+    height: 20rem;
+}
+
+.contenedor-img img {
+    height: 100%;
+}
+
+.precio {
+    color: #71b100;
+    font-weight: 700;
+}
+
+.contenedor-boton-anuncio {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.boton-anuncio {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-align: center;
+    border: none;
+    background-color: black;
+    border-radius: 20px;
+    width: 20rem;
+    margin: 0 auto;
+    margin-right: 5rem;
+}
+
+.boton-anuncio:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.none {
+    display: none;
+}
+
+/*MEDIA QUERIES PARA LOS ANUNCIOS*/
+@media only screen and (max-width : 1120px) {
+
+    .anuncio:hover {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width : 900px) {
+    .contenedor-anuncios {
+        display: block;
+    }
+
+    .anuncio {
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    .anuncio:hover {
+        transform: scale(1);
+    }
+
+    .contenedor-boton-anuncio {
+        display: flex;
+        justify-content: center;
+    }
+
+    .boton-anuncio {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width : 580px) {
+
+    .anuncio {
+        width: 25rem;
+    }
+}
+
+@media only screen and (max-width : 420px) {
+
+    .anuncio {
+        width: 90%;
+    }
+
+    .anuncio {
+        height: 500px;
+    }
+
+    .anuncio h3, p {
+        line-height: 1.5;
+    }
+
+    .anuncio h3 {
+        font-size: 1.4rem;
+    }
+
+    .anuncio p {
+        font-size: 1.2rem;
+    }
+}
+
+
+/*SECTION CONTACTO*/
+
+.contacto-index {
+    background-image: url(img/contacto.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 33rem;
+    position: relative;
+}
+
+.contacto-index:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.titulo-contacto-index {
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.contenedor-contacto-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    height: 60%;
+}
+
+/*MEDIA QUERIES PARA EL CONTACTO*/
+
+@media only screen and (max-width : 900px) {
+    .texto-contacto-index {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .texto-contacto-index h4 {
+        font-size: 1.6rem;
+    }
+}
+
+/*NOSOTROS*/
+
+.contenedor-nosotros {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.nosotros-icono {
+    width: 10rem;
+    margin: 1rem 0;
+}
+
+.mapa {
+    margin: 4rem auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-mapa {
+    width: 25rem;
+}
+
+/*MEDIA QUERIES PARA EL FOOTER*/
+
+@media only screen and (max-width : 900px) {
+    .contenedor-nosotros {
+        display: block;
+    }
+
+    .nosotros-icono {
+        margin: 2rem auto;
+    }
+}
+
+
+/*FOOTER*/
+
+.footer {
+    padding: 2rem;
+}
+
+.copyright {
+    color: white;
+}
+
+/*MEDIA QUERIES PARA EL FOOTER*/
+
+@media only screen and (max-width : 900px) {
+    .copyright {
+        font-size: 1.4rem;
+        margin: 0 auto;
+    }
+}
+
+
+/*CONTACTO*/
+
+.imagen-formulario {
+    height: 80vh;
+    width: 100%;
+}
+
+.width-centrado {
+    max-width: 800px;
+}
+
+.contacto {
+    font-size: 1rem;
+}
+
+.contacto p {
+    color: #4f4f4f;
+}
+
+.margin-p {
+    margin: 0.7rem 0 0 0
+}
+
+.texto-formulario {
+    font-size: 2.2rem;
+}
+
+fieldset {
+    padding: 0.7rem;
+}
+
+legend {
+    font-size: 1.6rem;
+    color: #4f4f4f;
+}
+
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+
+.input,
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+textarea {
+    min-height: 100px;
+    width: 100%;
+}
+
+.input-radio {
+    width: 1rem;
+    margin: 0;
+}
+
+.forma-contacto {
+    max-width: 18rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*MEDIA QUERIES PARA EL FORMULARIO*/
+
+@media only screen and (max-width : 900px) {
+    .texto-formulario {
+        line-height: 1.4;
+    }
+
+    .submit-contacto {
+        text-align: center;
+    }
+}
+
+
+/*NOSOTROS*/
+
+.contenedor-informacion {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 6rem;
+    align-items: center;
+}
+
+video {
+    width: 98%;
+    margin: 2rem 0;
+}
+
+ol {
+    margin-top: 40px;
+    text-align: left;
+    line-height: 2;
+    list-style-type: none;
+}
+
+ol span {
+    font-weight: 700;
+}
+
+/*MEDIA QUERIES PARA NOSOTROS*/
+
+@media only screen and (max-width : 1200px) {
+    ol {
+        text-align: center;
+    }
+
+    .contenedor-informacion {
+        display: block;
+    }
+
+    .texto-nosotros {
+        margin: 0 1rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .texto-nosotros ul {
+        list-style: none;
+    }
+
+    .texto-nosotros ul li p {
+        font-size: 1.6rem;
+    }
+
+    .mapa {
+        text-align: center;
+    }
+
+    .btn-mapa {
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width : 1085px) {
+    .mq-nosotros {
+        display: block;
+    }
+
+    .mq-icono {
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+}
+
+
+/*NAV MOVIL*/
+
+.menu-movil {
+    display: none;
+}
+
+/*MEDIA QUERIES PARA EL NAV MOVIL*/
+@media only screen and (max-width : 900px) {
+    .contenedor-menu-movil {
+        width: 100%;
+        height: 270px;
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+    .texto-header {
+        justify-content: flex-start;
+    }
+
+    .menu-movil label img {
+        width: 22.4px;
+        height: 25.6px;
+    }
+
+    .color-menu {
+        background-color: white;
+        border-radius: 15%;
+    }
+
+    .menu-movil {
+        display: inline-block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .menu-movil ul {
+        display: none;
+    }
+
+    .menu-movil input:checked  ~ ul {
+        display:block;
+    }
+
+    .menu-movil input {
+        display: none;
+    }
+      
+
+    .menu-movil li {
+        display: block;
+        background: black;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        border-bottom: 1px solid grey;
+    }
+      
+}
